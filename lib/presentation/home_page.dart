@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nft_marketplace/components/components.dart';
 import 'package:nft_marketplace/constants/constants.dart';
+import 'package:nft_marketplace/presentation/detail_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -34,15 +35,35 @@ class HomePage extends StatelessWidget {
                     shrinkWrap: true,
                     // physics: NeverScrollableScrollPhysics(),
                     scrollDirection: Axis.horizontal,
-                    children: const [
-                      LiveBidsCard(
-                        posterNFT: 'assets/images/poster-nft-1.png',
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const DetailPage(),
+                            ),
+                          );
+                        },
+                        child: const LiveBidsCard(
+                          posterNFT: 'assets/images/poster-nft-1.png',
+                        ),
                       ),
-                      LiveBidsCard(
+                      const LiveBidsCard(
                         posterNFT: 'assets/images/poster-nft-2.png',
                       ),
-                      LiveBidsCard(
-                        posterNFT: 'assets/images/poster-nft-1.png',
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const DetailPage(),
+                            ),
+                          );
+                        },
+                        child: const LiveBidsCard(
+                          posterNFT: 'assets/images/poster-nft-1.png',
+                        ),
                       ),
                     ],
                   ),
@@ -85,7 +106,7 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-            Navbar(),
+            const Navbar(),
           ],
         ),
       ),

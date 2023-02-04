@@ -9,7 +9,7 @@ class SearchBar extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          child: Container(
+          child: SizedBox(
             height: 46,
             child: TextField(
               style: const TextStyle(

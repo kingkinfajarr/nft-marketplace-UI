@@ -96,7 +96,8 @@ class Navbar extends StatelessWidget {
                           width: 24,
                           decoration: const BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage('assets/icon/bids-icon.png'),
+                              image:
+                                  AssetImage('assets/icon/bids-nav-icon.png'),
                               fit: BoxFit.cover,
                             ),
                           ),
